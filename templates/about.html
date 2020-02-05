@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.locals-list>img {
+    width: 400px;
+}
+div {
+    text-align:center;font-size: 10px;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+  text-align:left;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<head>
+    <div class="main">
+<header role="banner">
+    <nav role="navigation">
+      <h2><a href="#">Red-Hawks</a></h2>
+      <ul class="nav-ul">
+        |
+        <a href="/">Home</a>
+        |
+        <a href="about"> About Us</a>
+        |
+        <a href="Technolgy"> Technologies</a>
+        |
+        <a href="Project"> Projects </a>
+        |
+        <a href="contact"> Contacts</a>
+        |
+        <a href="login"> Sign-in</a>
+        |
+      </ul>
+    </nav>
+  </header>
+<hr>
+  <div class="locals-list">
+<img src="https://www.lifeisgood.com/dw/image/v2/AAHN_PRD/on/demandware.static/-/Sites-LIG2015-Library/default/dwbe3087a8/clp_sale/SC_1.5_saleLP_desktop.jpg?sw=768&sfrm=jpg" height="120px" width="1000px" data-pin-nopin="true">
+  </div>
+  <hr>
+
+</head>
+<body>
+<div class="sidenav">
+    <img src="https://static-s.aa-cdn.net/img/gp/20600011634833/PPBuujDSaDukGHIuMMinFi39_8IggBfftmZ726Sd_glO39e-G10i-axbMNam1OgF0yo=s300?v=1">
+ <hr>
+  <a href="/">Home</a>
+  <a href="about">About US</a>
+  <a href="contact">Contact</a>
+  <hr>
+  <a href="">BRAND</a>
+  <hr>
+  <a href="Reflex Women">Reflex Women</a>
+  <a href="Reflex Men">Reflex Men</a>
+  <a href="MLANM Mens">MLANM Mens</a>
+  <a href="Gildan Men">Gildan Men</a>
+  <a href="IWOLLENCE Womens">IWOLLENCE Womens</a>
+  <a href="Disposable">Disposable</a>
+  <a href="PAUL JONES Men">PAUL JONES Men</a>
+  <a href="MUSHARE Women">MUSHARE Women</a>
+  <a href="Kenneth Cole">Kenneth Cole</a>
+  <hr>
+</div>
+      <h2>Red-Hawks Team </h2>
+<div class="locals-list">
+      <img src="https://drive.google.com/uc?export=view&id=1UFpRiYVotdMqFpI9WzA47kGkzhVJSbbQ" alt="Team" width="1200" height="160">
+ </div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+
+      <div class="container">
+        <h2>Kaushik Banerjee </h2>
+        <p>Email : kaushik.b@in.ibm.com</p>
+        <p>slack : @kaushik.b</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+
+      <div class="container">
+        <h2>Uttam Manna</h2>
+        <p>Email : uttmanna@in.ibm.com</p>
+        <p>slack : @uttmanna</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+      <div class="column">
+    <div class="card">
+
+      <div class="container">
+       <h2>Amit K Agrawal</h2>
+        <p>Email : amitagra@in.ibm.com</p>
+        <p>slack : @amitagra</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+
+      <div class="container">
+        <h2>Sudipto Pal</h2>
+        <p>Email : sudipal2@in.ibm.com</p>
+        <p>slack : @sudipal2</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+
+      <div class="container">
+        <h2>Pranab Ghosh</h2>
+        <p>Email : pranghos@in.ibm.com</p>
+        <p>slack : @Pranab Ghosh</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+      <div class="column">
+    <div class="card">
+
+      <div class="container">
+        <h2>Rajdeep Roy</h2>
+        <p>Email : rajdroy1@in.ibm.com</p>
+        <p>slack : @rajdroy1</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

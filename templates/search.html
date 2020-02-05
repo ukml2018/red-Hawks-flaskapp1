@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="livebox">
+
+</body>
+<script>
+    $(document).ready(function(){
+        $("#livebox").on("input",function(e){
+            textinlivebox=$("#livebox").val();
+            $.ajax({
+                method: "post",
+                url:"/livesearch",
+                data:{text:textinlivebox},
+                success:function(res){
+                    console.log(res);
+                }
+            })
+        });
+    })
+</script>
+
+</html>

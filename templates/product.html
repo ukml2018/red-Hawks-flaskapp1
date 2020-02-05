@@ -1,0 +1,170 @@
+<html>
+<style>
+.content {
+  background-color: white;
+  padding: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.locals-list>img {
+    width: 400px;
+}
+div {
+    text-align:center;font-size: 10px;
+}
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+  text-align:left;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<head>
+    <div class="main">
+<header role="banner">
+    <nav role="navigation">
+      <h2><a href="#">Red-Hawks</a></h2>
+      <ul class="nav-ul">
+        |
+        <a href="/">Home</a>
+        |
+
+      </ul>
+    </nav>
+  </header>
+<hr>
+  <div class="locals-list">
+<img src="https://www.lifeisgood.com/dw/image/v2/AAHN_PRD/on/demandware.static/-/Sites-LIG2015-Library/default/dwbe3087a8/clp_sale/SC_1.5_saleLP_desktop.jpg?sw=768&sfrm=jpg" height="120px" width="1000px" data-pin-nopin="true">
+  </div>
+  <hr>
+
+</head>
+<body>
+<div class="sidenav">
+    <img src="https://static-s.aa-cdn.net/img/gp/20600011634833/PPBuujDSaDukGHIuMMinFi39_8IggBfftmZ726Sd_glO39e-G10i-axbMNam1OgF0yo=s300?v=1">
+ <hr>
+  <a href="/">Home</a>
+
+
+  <hr>
+  <a href="">BRAND</a>
+  <hr>
+   <a href="">Reflex Women</a>
+  <a href="">Reflex Men</a>
+  <a href="">MLANM Mens</a>
+  <a href="">Gildan Men</a>
+  <a href="">IWOLLENCE Womens</a>
+  <a href="">Disposable</a>
+  <a href="">PAUL JONES Men</a>
+  <a href="">MUSHARE Women</a>
+  <a href="">Kenneth Cole</a>
+  <hr>
+</div>
+
+<div class="main">
+
+</div >
+    <div class="row">
+    {% for user in userDetails %}
+
+  <div class="column women">
+    <div class="content">
+
+      <img src={{user["image"]}} alt="Mountains" width="500" height="242" broder="1">
+
+    </div>
+  </div>
+  <div class="column women">
+    <div class="content">
+      <h4>{{user["descp"]}} </h4>
+        <br>
+        <br>
+        <br>
+
+        <font size="4"><br><br><br><p >Size: <b>{{user["size"]}}</b>   Color: <b>{{user["color"]}}  </b> <br> Price: <strike>{{user["rprice"]}}</strike> <b>{{user["dis"]}}</b>  </p></font>
+      <form><input type='button' value='ADD to CART' onclick="openWin()">
+
+    </div>
+  </div>
+    {% endfor %}
+
+
+</div>
+  <aside>
+      Recommandation
+            </aside>
+{% for user in userDetails %}
+<h6>{{user["descp"]}} </h6>
+<img src={{user["image"]}} alt="Mountains" width="75" height="75" broder="1">
+ <font size="1"><br><br><br><p >Size: <b>{{user["size"]}}</b>   Color: <b>{{user["color"]}}  </b> <br> Price: <strike>{{user["rprice"]}}</strike> <b>{{user["dis"]}}</b>  </p></font>
+      <form><input type='button' value='ADD to CART' onclick="openWin()">
+{% endfor %}
+</body>
+<script>
+    function openWin() {
+  window.open("checkout");
+}
+</script>
+</html>

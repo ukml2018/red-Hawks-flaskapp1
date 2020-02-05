@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+div {
+    text-align:center;font-size: 10px;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.locals-list>img {
+    width: 400px;
+}
+.button {
+  .button5 {background-color: #555555;} /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+  text-align:left;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<body>
+<i class='fas fa-microphone'></i>
+<i class='fas fa-microphone' style='font-size:24px'></i>
+<i class='fas fa-microphone' style='font-size:36px'></i>
+<i class='fas fa-microphone' style='font-size:48px;color:red'></i>
+<div class="sidenav">
+    <img src="https://static-s.aa-cdn.net/img/gp/20600011634833/PPBuujDSaDukGHIuMMinFi39_8IggBfftmZ726Sd_glO39e-G10i-axbMNam1OgF0yo=s300?v=1">
+  <hr>
+  <a href="/">Home</a>
+  <a href="about">About US</a>
+  <a href="contact">Contact</a>
+  <hr>
+  <a href="">BRAND</a>
+  <hr>
+  <a href="Reflex Women">Reflex Women</a>
+  <a href="Reflex Men">Reflex Men</a>
+  <a href="MLANM Mens">MLANM Mens</a>
+  <a href="Gildan Men">Gildan Men</a>
+  <a href="IWOLLENCE Womens">IWOLLENCE Womens</a>
+  <a href="Disposable">Disposable</a>
+  <a href="PAUL JONES Men">PAUL JONES Men</a>
+  <a href="MUSHARE Women">MUSHARE Women</a>
+  <a href="Kenneth Cole">Kenneth Cole</a>
+  <hr>
+</div>
+<!-- MAIN (Center website) -->
+<div class="main">
+<header role="banner">
+    <nav role="navigation">
+      <h2><a href="#">Red-Hawks</a></h2>
+      <ul class="nav-ul">
+        |
+        <a href="">Home</a>
+        |
+        <a href="about"> About Us</a>
+        |
+        <a href="Technolgy"> Technologies</a>
+        |
+        <a href="Project"> Projects </a>
+        |
+        <a href="contact"> Contacts</a>
+        |
+        <a href="login"> Sign-in</a>
+        |
+      </ul>
+    </nav>
+  </header>
+<hr>
+  <div class="locals-list">
+<img src="https://www.lifeisgood.com/dw/image/v2/AAHN_PRD/on/demandware.static/-/Sites-LIG2015-Library/default/dwbe3087a8/clp_sale/SC_1.5_saleLP_desktop.jpg?sw=768&sfrm=jpg" height="120px" width="1000px" data-pin-nopin="true">
+  </div>
+  <hr>
+<form method="POST"  enctype=multipart/form-data>
+Search : <input type="text" id='speechText' name="name"/>
+  <input type="button" id="start" value='Voice Search' onclick='startRecording();'/>
+     <input type = "file" name = "file" />
+    <input type = "submit"/>
+  <hr>
+</form>
+
+
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">All</button>
+  <button class="btn" onclick="filterSelection('Reflex-Jacket')">Reflex-Jacket</button>
+  <button class="btn" onclick="filterSelection('T-Shirt')">T-Shirt</button>
+  <button class="btn" onclick="filterSelection('PAUL JONES-Waist Coat')">Wool Waistcoat</button>
+  <button class="btn" onclick="filterSelection('IWOLLENCE-Tops Loose')">IWOLLENCE-Tunic Blouse</button>
+  <button class="btn" onclick="filterSelection('Workforce-Lab Coat')">Workforce-Lab Coat</button>
+  <button class="btn" onclick="filterSelection('MUSHARE-Women Formal')">MUSHARE-Suit</button>
+  <button class="btn" onclick="filterSelection('REACTION Kenneth Cole-Blazer')">Men-Cole</button>
+</div>
+ <hr>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Medium</b>  Price :<strike>39.33</strike><b>39.28</b></b><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1001)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Green</b> Size:<b>Medium</b>  Price :<strike>39.33</strike><b>39.28</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1002)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Maroon</b> Size:<b>Medium</b>  Price :<strike>45</strike><b>45</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1003)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>large</b>  Price :<strike>39.33</strike><b>39.28</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1004)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Green</b> Size:<b>large</b>  Price :<strike>39.33</strike><b>39.28</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1005)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Maroon</b> Size:<b>large</b>  Price :<strike>45</strike><b>45</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1006)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Small</b>  Price :<strike>39.33</strike><b>39.28</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1007)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Women's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Green</b> Size:<b>Small</b>  Price :<strike>39.33</strike><b>39.28</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=1008)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Medium</b>  Price :<strike>40</strike><b>40</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2001)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Green</b> Size:<b>Medium</b>  Price :<strike>40</strike><b>40</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2002)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Blue</b> Size:<b>Medium</b>  Price :<strike>50</strike><b>49.9</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2003)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>large</b>  Price :<strike>40</strike><b>39.9</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2004)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Green</b> Size:<b>large</b>  Price :<strike>40</strike><b>39.9</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2005)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Blue</b> Size:<b>large</b>  Price :<strike>45</strike><b>45</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2006)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Small</b>  Price :<strike>45</strike><b>44.9</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2007)}}'"></div></div>
+<div class="column Reflex-Jacket"><div class=content><h4>Reflex Men's Track Jacket</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Green</b> Size:<b>Small</b>  Price :<strike>45</strike><b>44.9</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=2008)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Medium</b>  Price :<strike>20</strike><b>20</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3001)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Blue</b> Size:<b>Medium</b>  Price :<strike>23</strike><b>23</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3002)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Gray</b> Size:<b>Medium</b>  Price :<strike>20</strike><b>20</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3003)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Small</b>  Price :<strike>20</strike><b>20</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3004)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Blue</b> Size:<b>Small</b>  Price :<strike>23</strike><b>23</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3005)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Gray</b> Size:<b>Small</b>  Price :<strike>20</strike><b>20</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3006)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>XL</b>  Price :<strike>20</strike><b>20</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3007)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>MLANM Mens Casual Slim Fit T-Shirt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Blue</b> Size:<b>XL</b>  Price :<strike>25</strike><b>25</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=3008)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>White</b> Size:<b>Medium</b>  Price :<strike>55</strike><b>54.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4001)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>White</b> Size:<b>Medium</b>  Price :<strike>70</strike><b>69.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4002)}}'"></div></div>
+<div class="column T-Shirtk"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Red</b> Size:<b>Medium</b>  Price :<strike>55</strike><b>54.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4003)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Red</b> Size:<b>Medium</b>  Price :<strike>70</strike><b>69.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4004)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>White</b> Size:<b>Small</b>  Price :<strike>50</strike><b>49.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4005)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>White</b> Size:<b>Small</b>  Price :<strike>65</strike><b>64.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4006)}}'"></div></div>
+<div class="column T-Shirtk"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Red</b> Size:<b>Small</b>  Price :<strike>50</strike><b>49.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4007)}}'"></div></div>
+<div class="column T-Shirt"><div class=content><h4>Gildan Men's Crew T-Shirt Multipack</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Red</b> Size:<b>Small</b>  Price :<strike>65</strike><b>64.8</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=4008)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Wine Red</b> Size:<b>Small</b>  Price :<strike>80</strike><b>79.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5001)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Wine Red</b> Size:<b>Medium</b>  Price :<strike>82</strike><b>81.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5002)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Wine Red</b> Size:<b>Large</b>  Price :<strike>82</strike><b>81.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5003)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Wine Red</b> Size:<b>XXLarge</b>  Price :<strike>84</strike><b>83.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5004)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Wine Red</b> Size:<b>XXLarge</b>  Price :<strike>84</strike><b>83.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5005)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Small</b>  Price :<strike>80</strike><b>79.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5006)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>Medium</b>  Price :<strike>82</strike><b>81.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5007)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>large</b>  Price :<strike>82</strike><b>81.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5008)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5009 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>XLarge</b>  Price :<strike>84</strike><b>83.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5009)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5010 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Black</b> Size:<b>XXLarge</b>  Price :<strike>84</strike><b>83.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5010)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5011 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Dark Green</b> Size:<b>small</b>  Price :<strike>80</strike><b>79.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5011)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5012 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Dark Green</b> Size:<b>Medium</b>  Price :<strike>82</strike><b>81.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5012)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5013 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Dark Green</b> Size:<b>Large</b>  Price :<strike>82</strike><b>81.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5013)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5014 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Dark Green</b> Size:<b>XLarge</b>  Price :<strike>84</strike><b>83.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5014)}}'"></div></div>
+<div class="column IWOLLENCE-Tops Loose"><div class=content><h4>IWOLLENCE Womens Waffle Knit Tunic Blouse</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5015 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Dark Green</b> Size:<b>XXLarge</b>  Price :<strike>84</strike><b>83.85</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=5015)}}'"></div></div>
+<div class="column Workforce-Lab Coat"><div class=content><h4>Disposable Lab Coate</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/6001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>NULL</b> Size:<b>large</b>  Price :<strike>50</strike><b>50</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=6001)}}'"></div></div>
+<div class="column Workforce-Lab Coat"><div class=content><h4>Disposable Lab Coate</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/6002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>NULL</b> Size:<b>Xlarge</b>  Price :<strike>55</strike><b>54.95</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=6002)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>Small</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7001)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>Medium</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7002)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>large</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7003)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>XLarge</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7004)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>XXLarge</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7005)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>small</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7006)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>Medium</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7007)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>Large</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7008)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7009 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>XLarge</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7009)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7010 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>XXLarge</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7010)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7011 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>Small</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7011)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7012 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>Medium</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7012)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7013 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>Large</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7013)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7014 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>Xlarge</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7014)}}'"></div></div>
+<div class="column PAUL JONES-Waist Coat"><div class=content><h4>PAUL JONES Men's Wool Waistcoat</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7015 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>XXLarge</b>  Price :<strike>69</strike><b>69</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=7015)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>Small</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8001)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>Medium</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8002)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>large</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8003)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>Xlarge</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8004)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>XXLarge</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8005)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>Small</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8006)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>Medium</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8007)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>Large</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8008)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8009 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>Xlarge</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8009)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8010 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>XXLarge</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8010)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8011 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>Small</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8011)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8012 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>Medium</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8012)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8013 alt="Mountains" width="175" height="125 broder="1"><p>Color :<b>Army Green</b> Size:<b>large</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8013)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8014 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>Xlarge</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8014)}}'"></div></div>
+<div class="column MUSHARE-Women Formal"><div class=content><h4>MUSHARE Women's Formal Suit</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8015 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Army Green</b> Size:<b>XXLarge</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=8015)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9001 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>38 Short</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9001)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9002 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>40 Regular</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9002)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9003 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>40 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9003)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9004 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>50 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9004)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9005 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Coffee</b> Size:<b>38 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9005)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9006 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>38 Short</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9006)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9007 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>40 Regular</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9007)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9008 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>40 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9008)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9009 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>50 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9009)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9010 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Navy Blue</b> Size:<b>38 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9010)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9011 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Gray-Blazer</b> Size:<b>38 Short/b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9011)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9012 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Gray-Blazer</b> Size:<b>40 Regular</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9012)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9013 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Gray-Blazer</b> Size:<b>40 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9013)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9014 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Gray-Blazer</b> Size:<b>50 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9014)}}'"></div></div>
+<div class="column REACTION Kenneth Cole-Blazer"><div class=content><h4>Kenneth Cole REACTION Men's Techni-Cole Suitt</h4><img src=http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9015 alt="Mountains" width="175" height="125" broder="1"><p>Color :<b>Gray-Blazer</b> Size:<b>38 Long</b>  Price :<strike>99</strike><b>99</b></p><form><input type='button' value='Order' onclick="window.location='{{url_for('product', product_id=9015)}}'"></div></div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+function openWin(item) {
+  window.open("product");
+}
+</script>
+
+<script>
+var recognition = new webkitSpeechRecognition();
+recognition.onresult = function(event) {
+  var saidText = "";
+  for (var i = event.resultIndex; i < event.results.length; i++) {
+    if (event.results[i].isFinal) {
+      saidText = event.results[i][0].transcript;
+    } else {
+      saidText += event.results[i][0].transcript;
+    }
+  }
+  // Update Textbox value
+  document.getElementById('speechText').value = saidText;
+    // Search Posts
+  searchPosts(saidText);
+}
+
+function startRecording(){
+  recognition.start();
+}
+
+function createFormData(image)
+{
+ var formImage = new FormData();
+ formImage.append('userImage', image[0]);
+ uploadFormData(formImage);
+}
+
+function uploadFormData(formData)
+{
+ $.ajax({
+ url: "upload_image.php",
+ type: "POST",
+ data: formData,
+ contentType:false,
+ cache: false,
+ processData: false,
+ success: function(data){
+  $('#drop-area').html(data);
+ }});
+}
+</script>
+
+
+</body>
+</html>
